@@ -26,4 +26,23 @@ pub enum Commands {
         /// threads for the analysis
         thread: String,
     },
+    /// logistic classifier for smiles
+    LogisticSMILE {
+        /// path to the smiles chmeical uses
+        smiles: String,
+        /// path to the expression file
+        expression: String,
+        /// sequence file
+        sequencefile: String,
+        /// threads for the analysis
+        threads: String,
+        /// expressio threashold for the classification
+        threshold: String,
+        /// prediction sequence file
+        predseq: String,
+        /// prediction expression file
+        predexp: String,
+        /// pred smiles file
+        predsmiles: String,
+    },
 }

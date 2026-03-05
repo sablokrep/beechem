@@ -53,7 +53,7 @@ pub fn qsar_chem(path: &str, nfoldvalue: &str) -> Result<String, Box<dyn Error>>
     let xarray = ndarray::Array2::from_shape_vec((xrows, xcols), xflat).unwrap();
     let yarray = ndarray::Array1::from_vec(matrixy);
     let mut finaldataset = Dataset::new(xarray, yarray);
-    let samplecount = finaldataset.nsamples();
+    let _samplecount = finaldataset.nsamples();
 
     // all hyperparameter combinations
     for &penalty in &penalties {
